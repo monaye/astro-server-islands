@@ -5,5 +5,20 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<RandomImage server:defer />
+	<RandomImage server:defer>
+		<div class="fallback" slot="fallback">
+			Loading...
+		</div>
+	</RandomImage>
 </Layout>
+
+<style>
+	.fallback {
+		padding: 16px;
+		display: flex;
+		align-items:  flex-start;
+		justify-content: center;
+		height: 100%;
+		font-size: 88px;
+	}
+</style>
