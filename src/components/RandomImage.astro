@@ -8,6 +8,8 @@ import Radio from '../assets/radio.png';
 const images = [Dreamer, Explorer, Radio];
 
 const randomImage = images[Math.floor(Math.random() * images.length)];
+
+await new Promise(resolve => setTimeout(resolve, 2000));
 ---
 
 <div>
